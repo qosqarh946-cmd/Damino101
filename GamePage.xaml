@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Damino_101_.az.GamePage" 
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#004d00">
+    <!-- x:Class yuxarıda GamePage olaraq düzəldildi -->
+
+    <Grid RowDefinitions="*, Auto">
+
+        <!-- 1. Masanın Ortası (Daşların qarışdığı yer) -->
+        <AbsoluteLayout x:Name="TableLayout" 
+                        Grid.Row="0" 
+                        HorizontalOptions="Fill" 
+                        VerticalOptions="Fill">
+
+            <Label Text="101 DOMİNO" 
+                   TextColor="#33FFFFFF" 
+                   FontSize="50" 
+                   FontAttributes="Bold"
+                   AbsoluteLayout.LayoutBounds="0.5, 0.5, -1, -1" 
+                   AbsoluteLayout.LayoutFlags="PositionProportional"/>
+        </AbsoluteLayout>
+
+        <!-- 2. Oyunçunun Əli (Aşağı hissə) -->
+        <Frame Grid.Row="1" 
+               BackgroundColor="#55000000" 
+               CornerRadius="20" 
+               Margin="10" 
+               Padding="10">
+
+            <VerticalStackLayout Spacing="10">
+                <Label x:Name="StatusLabel" 
+                       Text="Oyuna başlamaq üçün düyməni sıxın" 
+                       TextColor="Gold" 
+                       HorizontalOptions="Center"/>
+
+                <FlexLayout x:Name="PlayerHandLayout" 
+                            Wrap="Wrap" 
+                            JustifyContent="Center" 
+                            HeightRequest="100"/>
+
+                <Button Text="DAŞLARI QARIŞDIR VƏ PAYLA" 
+                        Clicked="OnShuffleAndDealClicked" 
+                        BackgroundColor="Gold" 
+                        TextColor="Black" 
+                        FontAttributes="Bold" 
+                        CornerRadius="10"/>
+            </VerticalStackLayout>
+        </Frame>
+    </Grid>
+</ContentPage>

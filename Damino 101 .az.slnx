@@ -1,0 +1,12 @@
+<Solution>
+  <Configurations>
+    <Platform Name="Any CPU" />
+    <Platform Name="ARM64" />
+  </Configurations>
+  <Project Path="Damino 101 .az.csproj">
+    <Platform Solution="*|ARM64" Project="ARM64" />
+    <Build Solution="Release|ARM64" Project="false" />
+    <Deploy Solution="Debug|ARM64" />
+    <Deploy Solution="Release|Any CPU" />
+  </Project>
+</Solution>

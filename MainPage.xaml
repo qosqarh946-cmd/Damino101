@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Damino_101_.az.MainPage"
+             NavigationPage.HasNavigationBar="False">
+
+    <Grid>
+        <!-- Arxa fon şəkli -->
+        <Image Source="background_blue.png" Aspect="AspectFill" />
+
+        <ScrollView>
+            <VerticalStackLayout Padding="20" Spacing="15">
+
+                <!-- Giriş Paneli -->
+                <Frame BackgroundColor="#55000000" CornerRadius="20" Padding="20" BorderColor="Transparent">
+                    <VerticalStackLayout Spacing="12">
+                        <Label Text="DOMİNO 101" TextColor="White" FontAttributes="Bold" HorizontalOptions="Center" FontSize="22" CharacterSpacing="2"/>
+
+                        <!-- İSTİFADƏÇİ ADI -->
+                        <Entry x:Name="UsernameEntry" 
+                               Placeholder="İstifadəçi adı" 
+                               PlaceholderColor="#DDD" 
+                               TextColor="White" 
+                               HeightRequest="45"/>
+
+                        <!-- PAROL -->
+                        <Entry x:Name="PasswordEntry" 
+                               Placeholder="Parol" 
+                               IsPassword="True" 
+                               PlaceholderColor="#DDD" 
+                               TextColor="White" 
+                               HeightRequest="45"/>
+
+                        <Label Text="🎁 Qeydiyyat Hədiyyəsi: 5000 Qızıl" TextColor="Gold" FontSize="13" HorizontalOptions="Center" FontAttributes="Bold"/>
+
+                        <Button Text="DAXİL OL" 
+                                Clicked="OnLoginClicked" 
+                                BackgroundColor="White" 
+                                TextColor="#0047AB" 
+                                FontAttributes="Bold" 
+                                CornerRadius="12" 
+                                HeightRequest="50"/>
+                    </VerticalStackLayout>
+                </Frame>
+
+                <!-- Onlayn Oyun Bölməsi -->
+                <Label Text="SÜRƏTLİ OYNA" TextColor="White" FontAttributes="Bold" Margin="5,10,0,0" FontSize="12"/>
+                <Button Text="RƏQİB TAP (ONLAYN)" 
+                        Clicked="FindRandomOpponent" 
+                        BackgroundColor="#00C853" 
+                        TextColor="White" 
+                        FontAttributes="Bold" 
+                        CornerRadius="15" 
+                        HeightRequest="65"/>
+
+                <!-- Oyun Yaratma Bölməsi -->
+                <Label Text="ÖZ OYUNUNU QUR" TextColor="White" FontAttributes="Bold" Margin="5,10,0,0" FontSize="12"/>
+                <Button Text="OYUN YARAT" 
+                        Clicked="CreateCustomGame" 
+                        BackgroundColor="#FFD700" 
+                        TextColor="Black" 
+                        FontAttributes="Bold" 
+                        CornerRadius="15" 
+                        HeightRequest="65"/>
+
+                <Button Text="KOD İLƏ DAXİL OL" 
+                        Clicked="JoinWithCode" 
+                        BackgroundColor="Transparent" 
+                        TextColor="White" 
+                        BorderColor="White" 
+                        BorderWidth="2" 
+                        CornerRadius="15" 
+                        HeightRequest="60"/>
+
+                <!-- Top Oyunçular (Reytinq) -->
+                <Frame BackgroundColor="#33FFFFFF" CornerRadius="15" Padding="15">
+                    <VerticalStackLayout Spacing="10">
+                        <Label Text="TOP OYUNÇULAR" TextColor="White" FontAttributes="Bold" HorizontalOptions="Center"/>
+                        <BoxView HeightRequest="1" Color="White" Opacity="0.3"/>
+                        <Grid ColumnDefinitions="30, *, Auto">
+                            <Label Text="1." TextColor="Gold" FontAttributes="Bold"/>
+                            <Label Grid.Column="1" Text="Domino_Ustasi" TextColor="White" Margin="5,0"/>
+                            <Label Grid.Column="2" Text="50,000 💰" TextColor="Gold"/>
+                        </Grid>
+                        <Grid ColumnDefinitions="30, *, Auto">
+                            <Label Text="2." TextColor="Silver"/>
+                            <Label Grid.Column="1" Text="Elvin_99" TextColor="White" Margin="5,0"/>
+                            <Label Grid.Column="2" Text="42,500 💰" TextColor="White"/>
+                        </Grid>
+                    </VerticalStackLayout>
+                </Frame>
+
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>
